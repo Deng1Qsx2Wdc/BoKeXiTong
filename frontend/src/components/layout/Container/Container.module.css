@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.container-sm { max-width: 640px; }
+.container-md { max-width: 720px; }
+.container-lg { max-width: 1120px; }
+.container-full { max-width: 100%; }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+}

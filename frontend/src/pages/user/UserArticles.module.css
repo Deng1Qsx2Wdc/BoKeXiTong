@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-6);
+  flex-wrap: wrap;
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.03em;
+}
+
+.filters {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-5);
+}
+
+.filter {
+  padding: 0.68rem 0.95rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast) var(--ease-out),
+    background-color var(--transition-fast) var(--ease-out),
+    color var(--transition-fast) var(--ease-out);
+}
+
+.filter:hover {
+  border-color: var(--color-border-medium);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.filter-active {
+  border-color: rgba(45, 159, 147, 0.18);
+  background: rgba(45, 159, 147, 0.08);
+  color: var(--color-accent-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  animation: fadeInUp var(--transition-slow) var(--ease-out) both;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-tertiary);
+}
+
+.item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-title {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.item-title:hover {
+  color: var(--color-accent-primary);
+}
+
+.meta {
+  display: flex;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+}
+
+.actions {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.empty {
+  padding: var(--spacing-8);
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+.empty a {
+  color: var(--color-accent-primary);
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.ArticleMapper">
+
+    <!-- 查询关注的人的文章 -->
+    <select id="getFollowingArticles" resultType="com.example.demo.pojo.entity.Article">
+        SELECT
+            a.*
+        FROM
+            Article a
+        INNER JOIN
+            Follows f
+        ON
+            f.target_id = a.author_id
+        WHERE
+            f.author_id = #{authorId}
+            AND f.status = 1
+            AND a.status = 1
+        ORDER BY
+            a.update_time DESC
+    </select>
+
+</mapper>

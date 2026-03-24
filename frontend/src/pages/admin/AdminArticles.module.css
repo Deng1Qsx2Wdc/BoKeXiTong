@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-tertiary);
+  line-height: var(--line-height-relaxed);
+}
+
+.toolbar {
+  max-width: 420px;
+  margin-bottom: var(--spacing-4);
+}
+
+.search-hint {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--spacing-5);
+}
+
+.filter {
+  padding: 0.62rem 0.9rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast) var(--ease-out),
+    background-color var(--transition-fast) var(--ease-out),
+    color var(--transition-fast) var(--ease-out);
+}
+
+.filter:hover {
+  border-color: var(--color-border-medium);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.filter-active {
+  border-color: rgba(45, 159, 147, 0.18);
+  background: rgba(45, 159, 147, 0.08);
+  color: var(--color-accent-primary);
+}
+
+.list {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-tertiary);
+}
+
+.main {
+  min-width: 0;
+  flex: 1;
+}
+
+.titleLink {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.titleLink:hover {
+  color: var(--color-accent-primary);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}
